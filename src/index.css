@@ -332,3 +332,83 @@ main{
     opacity: 1;
   }
 }
+@media (width <= 700px) { 
+  .header{
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+  }
+  .titleInformation{
+    font-size: 3rem;
+  }
+ 
+  .title{
+    font-size: 3.8rem;
+  }
+  .containerOptions{
+    flex-direction: column;
+  }
+  .cardContainer{
+      display: block
+      
+    }
+    .carouselContainer img{
+      max-width: 30rem;
+    }
+    .information{
+      flex-direction: column;
+    }
+    .information img{
+      width: 20rem;
+      height: 20rem;
+    }
+    .information p{
+      width: 90%;
+    }
+    .Containerobjectives{
+      flex-direction: column;
+      width: 100%;
+    }
+    .ContainerGeneralObjective{
+      width: 100%;
+    }
+    .ContainerSpecificObjective{
+      width: 100%;
+    }
+    .objectiveInformation{
+      width: 100%;
+    }
+    .cardImage{
+      width: 90%;
+    }
+    .containerResources{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cardContainer{
+      max-width: 80%;
+      overflow: hidden;
+      
+    }
+    .cardResources{
+      flex-direction: column;
+      align-items: center;
+    }
+    .cardInfo{
+      justify-content: space-evenly;
+    }
+    .buttonSelectedImage{
+      width: 3rem;
+    }
+    .Containerobjectives h3{
+      font-size: 2.5rem;
+    }
+    .cardCircleImage{
+      left: 30%;
+      top: 30%;
+    }
+    .footer{
+      width: 100vw;
+    }
+}
