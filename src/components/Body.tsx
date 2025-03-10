@@ -14,9 +14,33 @@ import ImageVirtualMentoring from '../assets/ed_12-800x800.png'
 import CircleImageVirtualMentoring from '../assets/clase-virtual.png'
 import Card from './Card'
 import Carousel from './Carousel'
-
+import { useState } from 'react'
+import { Box, Modal } from '@mui/material'
+import Meeting from '../assets/reunion.png'
 
 export default function Body() {
+	const [showModal,setShowModal]=useState(false)
+	const [id,setId]=useState('')
+	const forums = [
+		{
+			name: 'Google Meet',
+			link: 'https://meet.google.com/landing',
+			icon: Meeting
+		},
+		{
+			name: 'Zoom',
+			link: 'https://www.zoom.com/es',
+			icon: Meeting
+		},
+		{
+			name: 'Microsoft Teams',
+			link: 'https://www.microsoft.com/es-es/microsoft-teams/log-in',
+			icon: Meeting
+		}
+	]
+	const handleClose = ()=>{
+		setShowModal(false)
+	}
 	return (
 		<main className='main'>
 			<Carousel/>
@@ -64,11 +88,43 @@ export default function Body() {
 			<section className='containerResources' id='resources'>
 				<h2 className='titleResources'>Recursos</h2>
 				<div className='cardResources'>
-					<Card Image={ImageAcademicResources} CircleImage={CircleImageAcademicResources} title={'Repositorio de Recursos Academicos'}/>
-					<Card Image={ImageVirtualMentoring} CircleImage={CircleImageVirtualMentoring} title={'Programa de Mentorías Virtuales'}/>
-					<Card Image={ImageOnlineVirtualForums} CircleImage={CircleImageOnlineVirtualForums} title={'Foros Virtuales en Linea '}/>
+					<Card Image={ImageAcademicResources} CircleImage={CircleImageAcademicResources} title={'Repositorio de Recursos Academicos'} setShowModal={setShowModal} showModal={showModal} setId={setId} id='1'/>
+					<Card Image={ImageVirtualMentoring} CircleImage={CircleImageVirtualMentoring} title={'Programa de Mentorías Virtuales'} setShowModal={setShowModal} showModal={showModal} setId={setId} id='2'/>
+					<Card Image={ImageOnlineVirtualForums} CircleImage={CircleImageOnlineVirtualForums} title={'Foros Virtuales en Linea '} setShowModal={setShowModal} showModal={showModal} setId={setId} id='3'/>
 				</div>
 			</section>
+			<Modal
+			open={showModal}
+			onClose={handleClose}
+			sx={{display:'flex',justifyContent:'center',alignItems:'center'}}
+			>	
+				<Box sx={{ width: 500,backgroundColor:'white',height:500,borderRadius:10,padding:3 }}>
+					<h2 className='titleModal'>Más información</h2>
+					{id === '1'?
+						<div className='academicResourcesContainer'>
+							<a rel='noopener' href="https://drive.google.com/file/d/10_iH4ucqkUtMSCoF0MybF7UBEfBAzyTJ/view?usp=sharing" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Manual</button></a>
+						</div>
+						: id === '2' ? 
+						<div className='virtualMentoringContainer'>
+
+						</div> 
+						:
+						<div className='virtualForumsContainer'>
+							{
+								forums.map(forum=>
+									<a href={forum.link} target='__blank' rel='noopener'>
+										<button title={forum.name} type='button' className='virtualForumButton'>
+											<img src={forum.icon} alt={forum.name} />
+											{forum.name}
+										</button>
+									</a>
+								)
+							}
+						</div>
+					}
+					
+				</Box>
+			</Modal>
 		</main>
 	)
 }

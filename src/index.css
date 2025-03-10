@@ -324,6 +324,65 @@ main{
 .arrowImage{
   max-width: 5rem;
 }
+.titleModal{
+  text-align: center;
+  font-family: "Abril Fatface", serif;
+  font-size: 3.2rem;
+  color: var(--primary);
+
+}
+.academicResourcesContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  border-top: 1px solid var(--gray);
+  padding: 1rem;
+}
+.academicResourcesManual{
+  height: 5rem;
+  min-width: 10rem;
+  width: auto;
+  color: white;
+  border-radius: 2rem;
+  background-color: var(--primary);
+  border: none;
+  font-family: "Raleway", serif;
+
+}
+a{
+  text-decoration: none;
+}
+.virtualForumButton{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--primary);
+  border: none;
+  font-family: "Raleway", serif;
+  border-radius: 2rem;
+  padding: 1rem;
+  color: var(--white);
+  text-decoration: none;
+}
+.virtualForumButton img{
+  margin-bottom: 1rem;
+  max-width: 3rem;
+  max-height: 3rem;
+}
+.virtualForumsContainer{
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--gray);
+  display: grid;
+  grid-auto-rows: 12rem;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+}
+
 @keyframes easeee{
   0%{
     opacity: 0;
