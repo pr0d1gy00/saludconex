@@ -12,6 +12,9 @@ import ImageOnlineVirtualForums from '../assets/12760664_4Z_2101.w017.n001.348B.
 import CircleImageOnlineVirtualForums from '../assets/chat.png'
 import ImageVirtualMentoring from '../assets/ed_12-800x800.png'
 import CircleImageVirtualMentoring from '../assets/clase-virtual.png'
+import Chart1 from '../assets/tabla-1.png'
+import Chart2 from '../assets/tabla-2.png'
+import Chart3 from '../assets/tabla-3.png'
 import Card from './Card'
 import Carousel from './Carousel'
 import { useState } from 'react'
@@ -93,20 +96,33 @@ export default function Body() {
 					<Card Image={ImageOnlineVirtualForums} CircleImage={CircleImageOnlineVirtualForums} title={'Foros Virtuales en Linea '} setShowModal={setShowModal} showModal={showModal} setId={setId} id='3'/>
 				</div>
 			</section>
+			<section className='frecuencyChart' id='chart'>
+				<h2 className='titleResources'>Cuafro frecuencias y porcentajes</h2>
+				<img src={Chart1} alt="chart1" />
+				<img src={Chart2} alt="chart2" />
+				<img src={Chart3} alt="chart3" />
+			</section>
 			<Modal
 			open={showModal}
 			onClose={handleClose}
 			sx={{display:'flex',justifyContent:'center',alignItems:'center'}}
 			>	
-				<Box sx={{ width: 500,backgroundColor:'white',height:500,borderRadius:10,padding:3 }}>
+				<Box sx={{ width: 500,backgroundColor:'white',minHeight:500, height:'auto',borderRadius:10,padding:3 }}>
 					<h2 className='titleModal'>Más información</h2>
 					{id === '1'?
 						<div className='academicResourcesContainer'>
 							<a rel='noopener' href="https://drive.google.com/file/d/10_iH4ucqkUtMSCoF0MybF7UBEfBAzyTJ/view?usp=sharing" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Manual</button></a>
+							<a rel='noopener' href="https://docs.google.com/document/d/1BSEPMCmGnsMitQfo34u1kv0Mz5qqazZg/edit?usp=sharing&ouid=109919264343269606181&rtpof=true&sd=true" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Tesis 1</button></a>
+							<a rel='noopener' href="https://docs.google.com/document/d/1PyCACOGXiI-ftlAbGJChavCDuBSP-HCr/edit?usp=sharing&ouid=109919264343269606181&rtpof=true&sd=true" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Tesis 2</button></a>
+							<a rel='noopener' href="https://docs.google.com/document/d/1eeKwMqwFzADiJp57YP3b5VUjbcNRXpT5/edit?usp=sharing&ouid=109919264343269606181&rtpof=true&sd=true" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Tesis 3</button></a>
+							<a rel='noopener' href="https://docs.google.com/document/d/1k8J4ZzmRNtg0shYf0aSgH_Kt2aCPYT-H/edit?usp=sharing&ouid=109919264343269606181&rtpof=true&sd=true" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Tesis 4</button></a>
+							<a rel='noopener' href="https://docs.google.com/document/d/13Y0ybW9MRzLC-Axt9ibGmfoL7zzSw_tp/edit?usp=sharing&ouid=109919264343269606181&rtpof=true&sd=true" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Tesis 5</button></a>
+							<a rel='noopener' href="https://docs.google.com/document/d/1XqnpwpSl7VRKa3XNYNbfxoeiY5gq6TOP/edit?usp=sharing&ouid=109919264343269606181&rtpof=true&sd=true" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Tesis 6</button></a>
+							<a rel='noopener' href="https://docs.google.com/document/d/1_or56RtW6PtPs73AdLyZ227TbPBnaMey/edit?usp=drive_link&ouid=109919264343269606181&rtpof=true&sd=true" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Tesis 7</button></a>
 						</div>
 						: id === '2' ? 
 						<div className='virtualMentoringContainer'>
-
+							
 						</div> 
 						:
 						<div className='virtualForumsContainer'>

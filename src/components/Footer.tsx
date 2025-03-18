@@ -7,7 +7,7 @@ export default function Footer() {
 				<img src={MedicineImage} alt="Medicine" className='medicineLogo'/>
 				<h2 className='title'>SaludConex</h2>
 			</div>
-			<p>Derechos reservados 2025. Erika</p>
+			<p>Derechos reservados 2025. Elka</p>
 		</footer>
 	)
 }
