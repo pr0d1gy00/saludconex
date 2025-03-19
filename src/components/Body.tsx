@@ -15,6 +15,7 @@ import CircleImageVirtualMentoring from '../assets/clase-virtual.png'
 import Chart1 from '../assets/tabla-1.png'
 import Chart2 from '../assets/tabla-2.png'
 import Chart3 from '../assets/tabla-3.png'
+import Scheduler from '../assets/Planificador.png'
 import Card from './Card'
 import Carousel from './Carousel'
 import { useState } from 'react'
@@ -106,9 +107,10 @@ export default function Body() {
 			open={showModal}
 			onClose={handleClose}
 			sx={{display:'flex',justifyContent:'center',alignItems:'center'}}
+
 			>	
-				<Box sx={{ width: 500,backgroundColor:'white',minHeight:500, height:'auto',borderRadius:10,padding:3 }}>
-					<h2 className='titleModal'>Más información</h2>
+				<Box sx={{ minWidth:500 , width: 'auto',backgroundColor:'white',minHeight:500,maxHeight:'90%',overflow:'scroll',scrollbarWidth:'none', height:'auto',borderRadius:10,padding:3 }}>
+					<h2 className='titleModal'>{id === '1' || id === '3' ?' Más información' : 'Planificación de  actividad de foro'}</h2>
 					{id === '1'?
 						<div className='academicResourcesContainer'>
 							<a rel='noopener' href="https://drive.google.com/file/d/10_iH4ucqkUtMSCoF0MybF7UBEfBAzyTJ/view?usp=sharing" target='_blank'><button type='button' title='manual' className='academicResourcesManual'>Manual</button></a>
@@ -123,6 +125,7 @@ export default function Body() {
 						: id === '2' ? 
 						<div className='virtualMentoringContainer'>
 							
+							<img src={Scheduler} alt="scheduler" />
 						</div> 
 						:
 						<div className='virtualForumsContainer'>
