@@ -97,12 +97,7 @@ export default function Body() {
 					<Card Image={ImageOnlineVirtualForums} CircleImage={CircleImageOnlineVirtualForums} title={'Foros Virtuales en Linea '} setShowModal={setShowModal} showModal={showModal} setId={setId} id='3'/>
 				</div>
 			</section>
-			<section className='frecuencyChart' id='chart'>
-				<h2 className='titleResources'>Cuafro frecuencias y porcentajes</h2>
-				<img src={Chart1} alt="chart1" />
-				<img src={Chart2} alt="chart2" />
-				<img src={Chart3} alt="chart3" />
-			</section>
+			
 			<Modal
 			open={showModal}
 			onClose={handleClose}
